@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f97316">
+  <meta name="description" content="Shopora — little finds, big smiles.">
+  <title>Shopora — Everyday finds, delivered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="announcement">A little something for your everyday <span>✦</span> Free delivery on orders over ₹999</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Shopora home"><span class="brand-mark">s.</span><span>shopora<span class="brand-dot">.</span></span></a>
+    <form class="search" id="search-form"><span class="search-icon">⌕</span><input id="search-input" type="search" placeholder="Search for anything..." aria-label="Search products"><button type="submit">Search</button></form>
+    <nav class="header-actions">
+      <button class="text-action" id="wishlist-btn" title="Wishlist"><span class="action-icon">♡</span><span class="action-label">Wishlist</span></button>
+      <button class="text-action" id="orders-btn" title="Your orders"><span class="action-icon">▤</span><span class="action-label">Orders</span></button>
+      <button class="text-action" id="account-btn"><span class="action-icon">♙</span><span class="action-label" id="account-label">Sign in</span></button>
+      <button class="cart-action" id="cart-btn"><span class="action-icon">♧</span><span>Cart</span><b id="cart-count">0</b></button>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> THE EVERYDAY EDIT</div>
+        <h1>Good things.<br><em>Great finds.</em></h1>
+        <p>Little upgrades that make your everyday feel a little more special. Discover your next favourite thing.</p>
+        <button class="primary-btn" id="shop-now">Explore the collection <span>↗</span></button>
+        <div class="hero-proof"><div class="avatar-stack"><i>☺</i><i>✿</i><i>★</i></div><div><strong>Loved by everyday people</strong><small>Thoughtful picks. Happy finds.</small></div></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-circle"></div>
+        <div class="hero-note note-top">YOUR NEXT<br><b>FAVOURITE</b> THING ✳</div>
+        <img class="hero-product" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=90" alt="Bright orange sneaker">
+        <div class="hero-tag"><span>✦</span><div><b>Fresh picks</b><small>Just for you</small></div></div>
+        <div class="hero-spark spark-one">✳</div><div class="hero-spark spark-two">✦</div>
+      </div>
+    </section>
+    <section class="benefits">
+      <div><span class="benefit-icon">↗</span><p><b>Easy on the wallet</b><small>Finds worth every rupee</small></p></div>
+      <div><span class="benefit-icon">♡</span><p><b>Picked with care</b><small>Everyday things, made better</small></p></div>
+      <div><span class="benefit-icon">⌁</span><p><b>Simple shopping</b><small>From browse to checkout</small></p></div>
+    </section>
+    <section class="catalog" id="catalog">
+      <div class="section-heading"><div><div class="eyebrow">THE GOOD STUFF</div><h2>Find your <em>favourite.</em></h2></div><p>Useful things. Lovely details.<br>All in one happy place.</p></div>
+      <div class="categories" id="categories">
+        <button class="category active" data-category="All">Everything <span>✳</span></button>
+        <button class="category" data-category="Electronics">Electronics</button>
+        <button class="category" data-category="Fashion">Fashion</button>
+        <button class="category" data-category="Accessories">Accessories</button>
+        <button class="category" data-category="Home">Home & living</button>
+      </div>
+      <div id="product-grid" class="product-grid"><div class="loading">Finding good things for you...</div></div>
+    </section>
+    <section class="bottom-banner"><div class="banner-spark">✳</div><div><div class="eyebrow">A GOOD DAY STARTS HERE</div><h2>Your next little <em>happy thing.</em></h2><p>Take a look around. You might find exactly what you didn't know you needed.</p></div><button class="light-btn" id="browse-more">Browse all finds <span>↗</span></button></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">s.</span><span>shopora<span class="brand-dot">.</span></span></a><p>Good finds for real life.</p><small>© <span id="year"></span> Shopora. Made for your everyday.</small></footer>
+
+  <div class="overlay" id="overlay" hidden>
+    <section class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <div class="drawer-head"><div><div class="eyebrow">SHOPORA</div><h2 id="drawer-title">Your bag.</h2></div><button class="close-btn" id="close-drawer" aria-label="Close">×</button></div>
+      <div id="drawer-content"></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
